@@ -1,20 +1,20 @@
 <html>
 
 <head>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         function myFunction() {
             console.log("u");
         }
 
-        $(document).ready(function() {
+        $(document).ready(function () {
             console.log("ready!");
 
-            $(".map_container").on('click', function(e) {
+            $(".map_container").on('click', function (e) {
                 var tar = jQuery(e.target)
 
                 if (tar.is("a")) {
-                    var asdf = tar.closest(".pin");
+                    var asdf = tar.parent().closest("middle");
                     var ele = jQuery("#other");
                     ele.show();
                 }
@@ -297,17 +297,27 @@
             left: 20%;
         }
 
+        .middle {
+            top: 50%;
+            left: 50%;
+            background-color: red;
+            position: absolute;
+            z-index: 9999;
+            visibility: hidden;
+        }
     </style>
 
 </head>
 
 <div class="mapwrapper">
     <div class="map_container">
-        <img src="image/euromap_ohne.png" />
+        <img src="euromap_ohne.png" />
 
+        <div class="middle">pin1</div>
         <a href="#" id="pin1" class="pin"></a>
+        <div class="middle">pin2</div>
         <a href="#" id="pin2" class="pin"></a>
-        <a href="#" id="pin3" class="pin"></a>
+        <!-- <a href="#" id="pin3" class="pin"></a>
         <a href="#" id="pin4" class="pin"></a>
         <a href="#" id="pin5" class="pin"></a>
         <a href="#" id="pin6" class="pin"></a>
@@ -338,7 +348,7 @@
         <a href="#" id="pin31" class="pin"></a>
         <a href="#" id="pin32" class="pin"></a>
         <a href="#" id="pin33" class="pin"></a>
-        <a href="#" id="pin34" class="pin"></a>
+        <a href="#" id="pin34" class="pin"></a> -->
 
     </div>
 </div>
