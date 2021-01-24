@@ -1,0 +1,346 @@
+<html>
+
+<head>
+
+    <script>
+        function myFunction() {
+            console.log("u");
+        }
+
+        $(document).ready(function() {
+            console.log("ready!");
+
+            $(".map_container").on('click', function(e) {
+                var tar = jQuery(e.target)
+
+                if (tar.is("a")) {
+                    var asdf = tar.closest(".pin");
+                    var ele = jQuery("#other");
+                    ele.show();
+                }
+
+
+            });
+
+        });
+
+    </script>
+
+
+    <style type="text/css">
+        body {
+            background-color: lightgray;
+        }
+
+        .mapwrapper {
+            margin: auto;
+            width: 50%;
+            display: block;
+        }
+
+
+        @media screen and (max-width: 1024px) {
+            .mapwrapper {
+                width: 85%;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .mapwrapper {
+                width: 100%;
+            }
+        }
+
+        .map_container {
+            position: relative;
+            display: inline-block;
+
+        }
+
+        .map_container img {
+            display: block;
+            max-width: 100%;
+
+
+        }
+
+        .pin {
+            width: 5%;
+            height: 5%;
+            border-radius: 50% 50% 50% 0;
+            background: #044329;
+            position: absolute;
+            transform: rotate(-45deg);
+            left: 50%;
+            top: 50%;
+        }
+
+        .pin:hover {
+            animation-name: pulse;
+            animation-fill-mode: both;
+            animation-duration: 0.8s;
+            transform: rotate(-45deg) !important;
+
+
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.8) rotate(-45deg);
+            }
+
+            80% {
+                transform: scale(1.2) rotate(-45deg);
+            }
+
+            100% {
+                transform: scale(1) rotate(-45deg);
+            }
+
+        }
+
+
+
+        .pin::after {
+            content: '';
+            width: 50%;
+            height: 50%;
+            margin: 25%;
+            background: yellow;
+            position: absolute;
+            border-radius: 50%;
+            transform: rotate(45deg) !important;
+
+        }
+
+
+
+        #pin1 {
+            top: 60%;
+            left: 50%;
+
+        }
+
+        #pin2 {
+            top: 63%;
+            left: 49%;
+        }
+
+        #pin3 {
+            top: 54%;
+            left: 30%;
+        }
+
+        #pin4 {
+            top: 70%;
+            left: 54%;
+
+        }
+
+        #pin5 {
+            top: 72%;
+            left: 67%;
+        }
+
+        #pin6 {
+            top: 68%;
+            left: 49.5%;
+        }
+
+        #pin7 {
+            top: 69%;
+            left: 50%;
+
+        }
+
+        #pin8 {
+            top: 55%;
+            left: 46%;
+        }
+
+        #pin9 {
+            top: 58%;
+            left: 48%;
+        }
+
+        #pin10 {
+            top: 41%;
+            left: 38%;
+
+        }
+
+        #pin11 {
+            top: 5%;
+            left: 80%;
+        }
+
+        #pin12 {
+            top: 60%;
+            left: 30%;
+        }
+
+        #pin13 {
+            top: 62%;
+            left: 27%;
+
+        }
+
+        #pin14 {
+            top: 49%;
+            left: 42%;
+        }
+
+
+        #pin15 {
+            top: 51%;
+            left: 43%;
+        }
+
+
+        #pin16 {
+            top: 63%;
+            left: 55%;
+        }
+
+        #pin17 {
+            top: 45%;
+            left: 11%;
+        }
+
+        #pin18 {
+            top: 40%;
+            left: 59%;
+
+        }
+
+        #pin19 {
+            top: 25%;
+            left: 35%;
+        }
+
+        #pin20 {
+            top: 31%;
+            left: 37%;
+        }
+
+        #pin21 {
+            top: 49%;
+            left: 51%;
+
+        }
+
+        #pin22 {
+            top: 77%;
+            left: 4%;
+        }
+
+        #pin23 {
+            top: 81%;
+            left: 3%;
+        }
+
+        #pin24 {
+            top: 37%;
+            left: 87%;
+
+        }
+
+        #pin25 {
+            top: 69%;
+            left: 60%;
+        }
+
+        #pin26 {
+            top: 66%;
+            left: 49%;
+        }
+
+        #pin27 {
+            top: 81%;
+            left: 19%;
+
+        }
+
+        #pin28 {
+            top: 95%;
+            left: -5%;
+        }
+
+        #pin29 {
+            top: 25%;
+            left: 45%;
+        }
+
+        #pin30 {
+            top: 64%;
+            left: 37%;
+        }
+
+        #pin31 {
+            top: 50%;
+            left: 31%;
+        }
+
+
+        #pin32 {
+            top: 80%;
+            left: 83%;
+        }
+
+        #pin33 {
+            top: 76%;
+            left: 45%;
+        }
+
+        #pin34 {
+            top: 49%;
+            left: 20%;
+        }
+
+    </style>
+
+</head>
+
+<div class="mapwrapper">
+    <div class="map_container">
+        <img src="image/euromap_ohne.png" />
+
+        <a href="#" id="pin1" class="pin"></a>
+        <a href="#" id="pin2" class="pin"></a>
+        <a href="#" id="pin3" class="pin"></a>
+        <a href="#" id="pin4" class="pin"></a>
+        <a href="#" id="pin5" class="pin"></a>
+        <a href="#" id="pin6" class="pin"></a>
+        <a href="#" id="pin7" class="pin"></a>
+        <a href="#" id="pin8" class="pin"></a>
+        <a href="#" id="pin9" class="pin"></a>
+        <a href="#" id="pin10" class="pin"></a>
+        <a href="#" id="pin11" class="pin"></a>
+        <a href="#" id="pin12" class="pin"></a>
+        <a href="#" id="pin13" class="pin"></a>
+        <a href="#" id="pin14" class="pin"></a>
+        <a href="#" id="pin15" class="pin"></a>
+        <a href="#" id="pin16" class="pin"></a>
+        <a href="#" id="pin17" class="pin"></a>
+        <a href="#" id="pin18" class="pin"></a>
+        <a href="#" id="pin19" class="pin"></a>
+        <a href="#" id="pin20" class="pin"></a>
+        <a href="#" id="pin21" class="pin"></a>
+        <a href="#" id="pin22" class="pin"></a>
+        <a href="#" id="pin23" class="pin"></a>
+        <a href="#" id="pin24" class="pin"></a>
+        <a href="#" id="pin25" class="pin"></a>
+        <a href="#" id="pin26" class="pin"></a>
+        <a href="#" id="pin27" class="pin"></a>
+        <a href="#" id="pin28" class="pin"></a>
+        <a href="#" id="pin29" class="pin"></a>
+        <a href="#" id="pin30" class="pin"></a>
+        <a href="#" id="pin31" class="pin"></a>
+        <a href="#" id="pin32" class="pin"></a>
+        <a href="#" id="pin33" class="pin"></a>
+        <a href="#" id="pin34" class="pin"></a>
+
+    </div>
+</div>
+
+</html>
